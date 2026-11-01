@@ -58,7 +58,7 @@ flowchart LR
   (`applyInPandasWithState`, with the detector logic in plain Python in `backend/streaming/detectors.py` so it can be unit-tested).
 - **FastAPI** keeps the latest picture in memory, rebuilt at start-up from SQLite plus whatever Kafka has that SQLite lacks,
   and pushes a snapshot to the browser every second over a WebSocket.
-- **Measured delay** on a laptop-class PC: Binance trade to API about 60 ms; trade to Spark result about 1.7 s (median).
+- **Measured delay** on a laptop-class PC: Binance trade to API about 60 ms; trade to Spark result about 1 s (median, 1-second micro-batches for the totals; the alert detectors run in 5-second batches).
 
 ## Quick start
 

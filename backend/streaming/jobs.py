@@ -146,7 +146,7 @@ def main() -> None:
     spark = create_spark_session("binance-stream")
     trades = read_trades(spark, args.starting)
     queries = [
-        to_kafka(build_aggregates(trades), settings.topics.agg, "aggregates", "update", "3 seconds"),
+        to_kafka(build_aggregates(trades), settings.topics.agg, "aggregates", "update", "1 second"),
         to_kafka(build_detectors(trades), settings.topics.alerts, "detectors", "append", "5 seconds"),
     ]
     log.info("streaming queries started: %s", [q.name for q in queries])

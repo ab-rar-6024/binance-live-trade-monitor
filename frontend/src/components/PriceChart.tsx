@@ -33,7 +33,7 @@ export function takeaway(name: string, data: Candle[], bucketMin: number): strin
 
 export function PriceChart({ symbol, change5m }: { symbol: string; change5m?: number | null }) {
   const [minutes, setMinutes] = useState<number>(60);
-  const { data, failed } = usePolling(() => fetchCandles(symbol, minutes), `${symbol}:${minutes}`, minutes === 60 ? 3000 : 15000);
+  const { data, failed } = usePolling(() => fetchCandles(symbol, minutes), `${symbol}:${minutes}`, minutes === 60 ? 1000 : 15000);
 
   const name = coinName(symbol);
   const candles = data?.candles ?? [];
