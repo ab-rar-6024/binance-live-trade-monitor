@@ -1,5 +1,7 @@
 # Binance Live Trade Monitor
 
+[![CI](https://github.com/ab-rar-6024/binance-live-trade-monitor/actions/workflows/ci.yml/badge.svg)](https://github.com/ab-rar-6024/binance-live-trade-monitor/actions/workflows/ci.yml)
+
 Real-time crypto trade analytics that anyone can read. Live trades from Binance flow through **Kafka**, are analysed by
 **Spark Structured Streaming**, served by a **Python (FastAPI)** backend and shown on a **React** dashboard that explains
 itself in plain language.
