@@ -1,0 +1,32 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Node / frontend build output and test artifacts
+node_modules/
+frontend/dist/
+frontend/test-results/
+frontend/playwright-report/
+*.tsbuildinfo
+
+# Runtime data created when the stack runs (never commit)
+data/
+logs/
+.env
+.env.*
+
+# Third-party software that setup downloads or builds itself
+kafka/
+vendor/
+backend/streaming/jars/
+backend/streaming/hadoop_shim/classes/
+backend/streaming/hadoop_shim/*.jar
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+scratch*

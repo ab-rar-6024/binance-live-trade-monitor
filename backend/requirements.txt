@@ -1,0 +1,13 @@
+# Backend (Python) dependencies - install into a virtual environment: pip install -r backend/requirements.txt
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+websockets==13.1
+confluent-kafka==2.6.1
+pyspark==3.4.4
+# PySpark 3.4 is not compatible with numpy 2 / pandas 2; keep this trio pinned together
+numpy==1.26.4
+pandas==1.5.3
+pyarrow==14.0.2
+# tests
+pytest==8.3.4
+httpx==0.28.1
